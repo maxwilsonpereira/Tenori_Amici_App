@@ -1,0 +1,69 @@
+/* .goldFont {
+  padding: 70px 40px;
+  color: #ae6e3d;
+  text-align: center;
+  font-family: objektiv-mk2;
+  background: linear-gradient(
+    90deg,
+    rgba(201, 200, 200, 1) 0%,
+    rgba(243, 243, 243, 1) 25%,
+    rgba(243, 243, 243, 1) 64%,
+    rgba(201, 200, 200, 1) 100%
+  );
+} */
+.AppContainer {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.greyLightBack {
+  text-align: center;
+  padding: 40px 0px 20px 0;
+  border-top: 1px solid rgb(130, 130, 130);
+  border-bottom: 1px solid rgb(130, 130, 130);
+  background: linear-gradient(
+    90deg,
+    rgba(190, 190, 190, 1) 0%,
+    rgba(243, 243, 243, 1) 25%,
+    rgba(243, 243, 243, 1) 64%,
+    rgba(190, 190, 190, 1) 100%
+  );
+}
+.greyLightBack h1 {
+  color: #323232;
+  text-decoration: underline;
+  font-family: LibreBaskerville-Regular, georgia, Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  font-weight: 100;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+/* 
+Aspect Ratio Calculator:
+https://calculateaspectratio.com/
+*/
+#videoHome {
+  width: 80vw;
+  height: 45vw;
+  max-width: 800px;
+  max-height: 450px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  #videoHome {
+    max-width: none;
+    max-height: none;
+    width: 90vw;
+    height: 50vw;
+  }
+  .greyLightBack h1 {
+    font-size: 1.4rem;
+  }
+}

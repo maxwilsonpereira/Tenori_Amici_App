@@ -1,0 +1,86 @@
+.AppContainer {
+  /* max-width: 900px; */
+  padding: 40px 0px 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.AppContainer h1 {
+  text-align: center;
+  /* color: rgb(100, 100, 100); */
+  color: #ae6e3d;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+  font-family: LibreBaskerville-Regular !important;
+  text-transform: uppercase !important;
+  font-size: 1.5em;
+  text-decoration: underline;
+  letter-spacing: 0.15em;
+  word-spacing: 0em;
+  line-height: 1.2em;
+  text-transform: none;
+  font-weight: normal;
+}
+.GridBio {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%; /* 5 columns */
+  /* box-sizing: border-box; */
+  /* justify-content: space-around; */
+  /* column-gap: 50px; */
+  /* padding: 40px; */
+}
+/* .GridBio > div {
+  } */
+.imageBio {
+  width: 100%;
+  transition: 0.8s ease-in-out;
+}
+.imageBio:hover {
+  /* transform: scale(1.1); */
+  /* opacity: 0.6; */
+  /* filter: brightness(40%); */
+}
+.BtnAbout {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 5px 10px;
+  top: 90%;
+  z-index: 2;
+}
+.imageBox {
+  /* position: relative; */
+  overflow: hidden;
+}
+.iconArrowLeft {
+  position: absolute;
+  z-index: 10;
+  top: 80%;
+  left: 20px;
+}
+.iconArrowRight {
+  position: absolute;
+  z-index: 10;
+  top: 80%;
+  right: 20px;
+}
+@media (max-width: 1200px) {
+  .GridBio {
+    grid-template-columns: 33.3% 33.3% 33.3% 33.3% 33.3%;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 800px) {
+  .GridBio {
+    grid-template-columns: 50% 50% 50% 50% 50%;
+    overflow: hidden;
+  }
+}
+
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  /* .GridBio {
+      grid-template-columns: 100%;
+    } */
+}

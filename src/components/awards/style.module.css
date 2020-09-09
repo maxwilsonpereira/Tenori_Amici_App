@@ -1,0 +1,61 @@
+.AppContainer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.backgroundImg {
+  /* PARALLAX */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+  padding: 30px 30px;
+  /* border-top: 1px solid rgb(130, 130, 130); */
+  /* border-bottom: 1px solid rgb(130, 130, 130); */
+}
+.backgroundImg h2 {
+  text-align: center;
+  /* color: rgb(100, 100, 100); */
+  /* color: #ae6e3d; */
+  color: #c0c0c0;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.7);
+  font-family: LibreBaskerville-Regular !important;
+  text-transform: uppercase !important;
+  font-size: 1.2rem;
+  /* letter-spacing: 0.15em; */
+  word-spacing: 0em;
+  /* line-height: 1.8em; */
+  text-transform: none;
+  font-weight: normal;
+}
+/* .starClass {
+  transform: translateY(15%);
+} */
+.gridAwards {
+  display: grid;
+  grid-template-columns: 10% 80% 10%; /* 3 columns */
+  box-sizing: border-box;
+  justify-content: space-around;
+  /* column-gap: 50px; */
+  padding: 5px 0;
+}
+.itemA {
+  justify-self: end;
+  margin-right: 10px;
+}
+.itemB {
+  justify-self: center;
+}
+.itemC {
+  justify-self: start;
+  margin-left: 10px;
+}
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  .backgroundImg h2 {
+    font-size: 1rem;
+  }
+}

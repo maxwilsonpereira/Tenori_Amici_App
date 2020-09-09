@@ -1,0 +1,62 @@
+.AppContainer {
+  /* max-width: 900px; */
+  /* padding: 40px 0 0 0; */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.AppContainer h1 {
+  text-align: center;
+  /* color: rgb(100, 100, 100); */
+  color: #ae6e3d;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+  font-family: LibreBaskerville-Regular !important;
+  text-transform: uppercase !important;
+  font-size: 2rem;
+  text-decoration: underline;
+  letter-spacing: 0.15em;
+  word-spacing: 0em;
+  line-height: 1.2em;
+  text-transform: none;
+  font-weight: normal;
+}
+.AppContainer h2 {
+  text-align: left;
+  /* color: rgb(100, 100, 100); */
+  color: #ae6e3d;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+  font-family: LibreBaskerville-Regular !important;
+  text-transform: uppercase !important;
+  font-size: 1.1em;
+  /* text-decoration: underline; */
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  letter-spacing: 0.15em;
+  word-spacing: 0em;
+  line-height: 1.4em;
+  text-transform: none;
+  font-weight: normal;
+}
+.imageBio {
+  width: 100%;
+  /* NEXT FLOAT TO DON'T ALLOW MISTERIOUS MARGIN: */
+  float: left;
+  transition: 0.8s ease-in-out;
+}
+.AboutTenor {
+  position: absolute;
+  top: 82%;
+  left: 3%;
+  z-index: 2;
+}
+.SingleTenor {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  /* .GridBio {
+    grid-template-columns: 100%;
+  } */
+}

@@ -1,0 +1,60 @@
+.AppContainer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.greyLightBack {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid rgb(130, 130, 130);
+  border-bottom: 1px solid rgb(130, 130, 130);
+  background: linear-gradient(
+    90deg,
+    rgba(190, 190, 190, 1) 0%,
+    rgba(243, 243, 243, 1) 25%,
+    rgba(243, 243, 243, 1) 64%,
+    rgba(190, 190, 190, 1) 100%
+  );
+}
+.greyLightBack h1 {
+  text-align: center;
+  /* color: rgb(100, 100, 100); */
+  color: #ae6e3d;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+  font-family: LibreBaskerville-Regular !important;
+  text-transform: uppercase !important;
+  font-size: 1.4rem;
+  letter-spacing: 0.15em;
+  word-spacing: 0em;
+  line-height: 1.2em;
+  text-transform: none;
+  font-weight: normal;
+}
+.greyLightBack h2 {
+  text-align: center;
+  /* color: rgb(100, 100, 100); */
+  color: #323232;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+  font-family: LibreBaskerville-Regular !important;
+  text-transform: uppercase !important;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  word-spacing: 0em;
+  line-height: 1.2em;
+  text-transform: none;
+  font-weight: normal;
+}
+
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  .greyLightBack {
+    padding: 20px 10px;
+  }
+  .greyLightBack h1 {
+    font-size: 1.1rem;
+  }
+  .greyLightBack h2 {
+    font-size: 0.8em;
+  }
+}

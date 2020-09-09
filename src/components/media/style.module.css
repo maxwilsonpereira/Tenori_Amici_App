@@ -1,0 +1,62 @@
+.gridMedia {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  /* box-sizing: border-box; */
+  /* justify-content: space-around; */
+  padding: 0;
+  margin: 0;
+}
+.GridFooter > div {
+  padding: 0;
+  margin: 0;
+}
+.imgBox {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.medias {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  filter: brightness(40%);
+  /* NEXT FLOAT TO DON'T ALLOW MISTERIOUS MARGIN: */
+  float: left;
+  transition: 0.4s ease-in-out;
+}
+.medias:hover {
+  cursor: pointer;
+  filter: brightness(100%);
+  transform: scale(1.1) rotate(1deg);
+}
+.textOverImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+  text-align: center;
+  /* color: rgb(100, 100, 100); */
+  color: #ae6e3d;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+  font-family: LibreBaskerville-Regular !important;
+  text-transform: uppercase !important;
+  font-size: 8vw;
+  letter-spacing: 0.15em;
+  word-spacing: 0em;
+  line-height: 1.2em;
+  text-transform: none;
+  font-weight: normal;
+}
+
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  .gridMedia {
+    grid-template-columns: 100%;
+  }
+  .textOverImg {
+    font-size: 15vw;
+  }
+}

@@ -1,0 +1,76 @@
+.centeredAligned {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.AppContainer {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* GRID: */
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named */
+.GridContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* grid-template-columns: 100%; */
+}
+.GridContainer > div {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 30px;
+  /* text-align: center; */
+  /* font-size: 30px; */
+}
+.grida h1 {
+  color: #323232;
+  text-decoration: underline;
+  font-family: LibreBaskerville-Regular, georgia, Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  font-weight: 100;
+  font-size: 1.8rem;
+}
+.grida h2 {
+  color: rgb(50, 50, 50);
+  font-family: LibreBaskerville-Regular, georgia, Arial, Helvetica, sans-serif;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
+  text-align: justify;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 100;
+  line-height: 1.3em;
+}
+.aboutImg {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.9);
+}
+.MobileOnly {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .grida h2 {
+    font-size: 1rem;
+  }
+}
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  .MobileDontShow {
+    display: none;
+  }
+  .MobileOnly {
+    display: inline;
+  }
+  .GridContainer {
+    grid-template-columns: 100%;
+  }
+  .GridContainer > div {
+    padding: 10px 30px;
+  }
+  .grida h2 {
+    font-size: 1.3rem;
+  }
+}

@@ -1,14 +1,29 @@
 {
-  "name": "tenori",
+  "name": "tenori_amici",
+  "hompage": "https://www.tenoriamici.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.20.0",
+    "emailjs-com": "^2.6.3",
     "react": "^16.13.1",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-icomoon": "^2.1.5",
+    "react-icons": "^3.10.0",
+    "react-images": "^1.1.7",
+    "react-modal-video": "^1.2.5",
+    "react-multi-carousel": "^2.5.5",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.0.0",
+    "react-scripts": "3.4.3",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

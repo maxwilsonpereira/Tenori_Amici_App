@@ -1,0 +1,3 @@
+// global.JS
+export const TOGGLE_SIDEDRAWER = "TOGGLE_SIDEDRAWER";
+export const HIDE_SIDEDRAWER = "HIDE_SIDEDRAWER";

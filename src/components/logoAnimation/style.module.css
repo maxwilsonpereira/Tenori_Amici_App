@@ -1,0 +1,53 @@
+.centeredAligned {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logoMain {
+  width: 95vw;
+  max-width: 1300px;
+}
+.logoDiv {
+  position: absolute;
+  color: white;
+  width: 100%;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+  /* max-width: 800px; */
+  /* padding: 50px; */
+  transition: 1s ease-in-out;
+}
+.fadeArrow {
+  transition: 1s ease-in-out;
+  animation: 2s linear;
+  animation-name: arrowani;
+  opacity: 0.4;
+}
+@keyframes arrowani {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  .fadeArrow {
+    display: none;
+  }
+  .logoDiv {
+    top: 55%;
+  }
+  .fadeArrow {
+    display: none;
+  }
+}

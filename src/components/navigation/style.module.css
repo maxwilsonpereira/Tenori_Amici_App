@@ -1,0 +1,169 @@
+.AppContainer {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.NavContainer {
+  position: fixed;
+  z-index: 999;
+  /* HORIZONTAL CENTERED: */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s ease-in-out;
+}
+.NavigationItems {
+  display: flex;
+  padding: 11px 2px;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+}
+.backgroundOnScroll {
+  opacity: 0.8;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  transition: 0.5s ease-in-out;
+}
+.NavigationItem {
+  list-style: none !important;
+}
+.NavigationItem a {
+  text-transform: uppercase;
+  font-size: 15px;
+  /* font-weight: bold; */
+  color: black;
+  margin-left: 9px;
+  margin-right: 9px;
+  transition: 0.2s;
+}
+.languages {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: black;
+  margin-left: 12px;
+  margin-right: 12px;
+  transition: 0.2s;
+}
+.pointer {
+  cursor: pointer;
+  line-height: 1.5em;
+}
+.pointerNoPadding {
+  cursor: pointer;
+}
+.languageOptions {
+  padding: 10px 0;
+  transition: 0.5s ease-in-out;
+  /* text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.8); */
+}
+.subMenuBox {
+  position: absolute;
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+  height: 3.2em;
+  width: 7.6em;
+  transform: translateX(-10%);
+  margin-top: 1px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.NavigationItem a:hover {
+  /* color: rgb(100, 100, 100); */
+  color: #8f2c31;
+}
+.NavigationItem a.active {
+  color: #8f2c31;
+  /* border-bottom: 4px solid white; */
+}
+.NavigationItem a.activeMobile {
+  color: #8f2c31;
+  border-bottom: none;
+}
+.LogoImg {
+  padding: 10px;
+}
+/* BARS class for the 3 lines Mobile Nav */
+.Bars {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  position: fixed;
+  opacity: 0.6;
+  z-index: 2;
+  /* position: absolute; */
+  top: 15px;
+  right: 15px;
+  color: #444444;
+  transition: 0.2s;
+}
+.Bars:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  color: #02447e;
+}
+.BarsToX {
+  background-color: #02447e;
+  padding: 5px;
+  border-radius: 5px;
+  position: fixed;
+  opacity: 0.5;
+  z-index: 20;
+  /* position: absolute; */
+  top: 15px;
+  right: 15px;
+  color: white;
+  transition: 0.2s;
+}
+.BarsToX:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  color: white;
+}
+.BarVertical {
+  border-left: 1px solid #444444;
+  height: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* HIDE NAV TO SHOW SIDEDRAWER FOR MOBILE */
+@media (max-width: 700px) {
+  .NavigationItems {
+    display: none;
+  }
+  .MobileDontShow {
+    display: none;
+  }
+  .backgroundOnScroll {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .LogoImg {
+    width: 80%;
+  }
+}
+/* HIDE NAV TO SHOW SIDEDRAWER FOR MOBILE */
+@media (min-width: 701px) {
+  .Bars {
+    display: none;
+  }
+  .BarsToX {
+    display: none;
+  }
+  .DesktopDontShow {
+    display: none;
+  }
+  .NavMobile {
+    display: none;
+  }
+}
+
+/* VERY LARGE MONITORS: */
+@media (min-width: 1400px) {
+  /* .NavigationItem a {
+      font-size: 25px;
+    } */
+}
