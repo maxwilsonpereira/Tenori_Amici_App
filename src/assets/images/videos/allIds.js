@@ -1,6 +1,8 @@
 // IDS:
 const videosIds = [
   "6sUkr0BXGDk",
+  "NMVpoQMHGPk",
+  "KNKgw_0y5e4",
   "TvHpTaFQlZ8",
   "sxCFtz4kypA",
   "iScfmWxmMkM",
@@ -10,8 +12,8 @@ const videosIds = [
   "n7blQCEZtWI",
   "iKT1KFLXGio",
   "rvyKoVd83pw",
-  "33-sU9YkTXk",
-  "il7CF7jXoFU",
+  // "33-sU9YkTXk",
+  // "il7CF7jXoFU",
 ];
 
 export default videosIds;

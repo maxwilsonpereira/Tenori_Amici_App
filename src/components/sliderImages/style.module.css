@@ -42,7 +42,8 @@
   } /* you must divide 100% fot the amout of images you have */
   7% {
     left: 0%;
-  } /* these intermediate steps (7%, 17%, 27%, ... will make the transition speed faster */
+  }
+  /* smaller these intermediate steps, faster will be the transition speed */
   10% {
     left: -100%;
   } /* because my total width: 1000% (10x 100% for 10 images), I will use 10% for each image */
@@ -91,6 +92,7 @@
   87% {
     left: -800%;
   }
+  /* HERE IT CHANGES FOR THE FIRST AGAIN, and comes back to beggin on 0%: */
   90% {
     left: -900%;
   }

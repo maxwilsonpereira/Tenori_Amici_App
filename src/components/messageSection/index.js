@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 // npm install --save react-animate-on-scroll
 // https://www.npmjs.com/package/react-animate-on-scroll
-import ScrollAnimation from "react-animate-on-scroll";
+import ScrollAnimation from 'react-animate-on-scroll';
 // IMPORTANT: ***************************
 // ADD "animate.min.css" file to ./utilities/animate.min.css
 // and import into App.js
@@ -14,7 +14,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 // EXAMPLES:
 // https://dbramwell.github.io/react-animate-on-scroll/
 
-import classes from "./style.module.css";
+import classes from './style.module.css';
 
 function MessageSection(props) {
   return (
@@ -23,7 +23,7 @@ function MessageSection(props) {
         <ScrollAnimation animateIn="fadeIn" animateOnce={true} duration={2}>
           <div
             id="anchorPoint"
-            style={{ position: "absolute", marginTop: "-30px" }}
+            style={{ position: 'absolute', marginTop: '-30px' }}
           />
           <br />
           <h1>{props.text}</h1>

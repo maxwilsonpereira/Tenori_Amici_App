@@ -32,6 +32,10 @@
   box-sizing: border-box;
 }
 
+img {
+  max-height: 100vh !important;
+}
+
 body {
   font-family: LibreBaskerville-Regular, georgia, Arial, Helvetica, sans-serif;
   background-color: rgb(0, 0, 0);

@@ -1,0 +1,283 @@
+@import '../../styles/text.scss';
+// .container IS ONLY for making fadein:
+.container,
+.containerNoPointerEvents {
+  position: fixed;
+  //   pointer-events: none;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  animation: 4s linear;
+  animation-name: fadeInMenu;
+  animation-fill-mode: backwards;
+  transition: 1s linear;
+}
+.containerNoPointerEvents {
+  pointer-events: none;
+}
+.iconOpenMenu,
+.menuNotClickable {
+  z-index: 4;
+  position: fixed;
+  cursor: pointer;
+  right: 10px;
+  top: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  //   background-color: rgb(122, 4, 4, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease-in-out;
+  animation: 2.5s linear;
+  animation-name: fadeInMenu;
+}
+.menuNotClickable {
+  pointer-events: none;
+}
+
+.iconOpenMenu path,
+.menuNotClickable path {
+  stroke: #030303;
+  //   stroke-width: 15%;
+}
+.iconOpenMenu:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+@keyframes fadeInMenu {
+  0% {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+  }
+  50% {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.closedMenu,
+.openedMenu {
+  //   position: absolute;
+  //   z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(320deg, #f1f1f1, #c4c2c2);
+
+  // background-image: linear-gradient(80deg, #ebebeb, #c9c9c9);
+  // background-image: linear-gradient(320deg, #8caec3, #587c92);
+  // background-image: linear-gradient(120deg, #de8579, #c2685c);
+  // background-image: linear-gradient(120deg, #e8cf7d, #c5ac5a);
+  // background-image: linear-gradient(120deg, #89b1cc, #6d9ab8);
+  // background-image: linear-gradient(120deg, #6fc7b3, #5fa595);
+}
+.closedMenu {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  animation: 0.4s ease-in-out;
+  animation-fill-mode: backwards;
+  animation-name: rideMenu;
+}
+@keyframes rideMenu {
+  0% {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  100% {
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+}
+.openedMenu {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  animation: 0.6s ease-in-out;
+  animation-name: showMenu;
+  //   animation-fill-mode: backwards;
+}
+@keyframes showMenu {
+  0% {
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  100% {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+.textDiv {
+  padding: 100px 50px 50px 100px;
+  // ********** MOBILE ********** //
+  @media (max-width: 800px) {
+    padding: 100px 0px 50px 40px;
+  }
+  @media (max-height: 800px) {
+    padding: 60px 0px 50px 40px;
+  }
+}
+.textDiv h1,
+.textDiv h3 {
+  display: inline-block;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 1px rgba(105, 105, 105, 0.9);
+  color: rgb(22, 22, 22);
+  line-height: 140%;
+  transition: 0.4s ease-in-out;
+}
+.textDiv h1 {
+  font-size: 80px;
+  @media (max-width: 800px) {
+    font-size: 10vw;
+  }
+}
+.textDiv h3 {
+  font-size: 40px;
+  margin-bottom: 20px;
+
+  @media (max-width: 800px) {
+    font-size: 6vw;
+  }
+}
+.textDiv h3:hover {
+  cursor: pointer;
+  margin-left: 5px;
+  text-shadow: 1px 1px 1px rgba(105, 105, 105, 0.9);
+  color: rgb(99, 11, 11);
+  // text-decoration: underline;
+  animation: 1s ease-in-out;
+}
+
+.textDiv h1:hover {
+  cursor: pointer;
+  margin-left: 10px;
+  text-shadow: 10px 1px 1px rgba(105, 105, 105, 0.9);
+  color: rgb(99, 11, 11);
+  // text-decoration: underline;
+  animation: 1s ease-in-out;
+}
+.textDiv h1::after {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  //   opacity: 0;
+  content: '';
+  width: 90%;
+  margin: auto;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  height: 0.5em;
+  border-top: 1px solid black;
+  transform: translateY(0%);
+  transition: 0.4s;
+}
+.textDiv h1:hover::after {
+  opacity: 1;
+  animation: 0.4s ease-in-out;
+  animation-name: lineMovement;
+}
+@keyframes lineMovement {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.activeLink {
+  pointer-events: none !important;
+  cursor: default !important;
+  color: rgb(140, 140, 140) !important;
+  font-style: italic;
+}
+
+.openedMenu .textDiv {
+  opacity: 1;
+  animation: 0.6s ease-in-out;
+  animation-name: textMovementIn;
+}
+@keyframes textMovementIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  2% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.closedMenu .textDiv {
+  opacity: 1;
+  animation: 0.6s ease-in-out;
+  animation-name: textMovementOut;
+}
+@keyframes textMovementOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+}
+.waveLetters {
+  @include waveLetters();
+}
+
+// ********** LARGE WIDTH ********** //
+@media (min-width: 1500px) {
+  .textDiv {
+    margin-left: 150px;
+  }
+}
+
+// ********** MOBILE ********** //
+@media (max-width: 800px) {
+  .textDiv h1:hover {
+    cursor: pointer;
+    margin-left: 5px;
+  }
+}
+
+// ********** SMALL HEIGHT MONITORS ********** //
+@media (max-height: 800px) {
+  // .textDiv h3 {
+  //   font-size: 30px;
+  // }
+  .dontShowSmallHeight {
+    display: none;
+  }
+}
+
+// SOCIAL MEDIA ICONS:
+.youtube,
+.facebook,
+.instagram {
+  display: inline;
+  color: rgb(20, 20, 20);
+  cursor: pointer;
+  margin-right: 20px;
+  transition: 0.3s linear;
+}
+.youtube:hover,
+.facebook:hover,
+.instagram:hover {
+  transform: scale(1.06);
+}
+.youtube:hover {
+  color: #ff0000;
+}
+.facebook:hover {
+  color: #4267b2;
+}
+.instagram:hover {
+  color: #fb3958;
+}

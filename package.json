@@ -16,14 +16,18 @@
     "react-icomoon": "^2.1.5",
     "react-icons": "^3.10.0",
     "react-images": "^1.1.7",
+    "react-loader-spinner": "^3.1.14",
     "react-modal-video": "^1.2.5",
     "react-multi-carousel": "^2.5.5",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.0.0",
     "react-scripts": "3.4.3",
+    "react-useanimations": "^2.0.6",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "rellax": "^1.12.1",
+    "sass": "^1.29.0"
   },
   "scripts": {
     "start": "react-scripts start",

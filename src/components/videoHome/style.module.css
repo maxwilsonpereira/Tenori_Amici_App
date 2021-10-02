@@ -16,6 +16,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  padding: 60px 10px;
 }
 .greyLightBack {
   text-align: center;
@@ -57,6 +58,9 @@ https://calculateaspectratio.com/
 }
 /* ***** MOBILE ***** */
 @media (max-width: 700px) {
+  .AppContainer {
+    padding: 40px 10px;
+  }
   #videoHome {
     max-width: none;
     max-height: none;

@@ -16,16 +16,16 @@ export default function SliderImages() {
   return (
     <div id={classes.slider}>
       <figure>
-        <img className={classes.zoomImg1} src={img1} />
-        <img className={classes.zoomImg2} src={img2} />
-        <img className={classes.zoomImg3} src={img3} />
-        <img className={classes.zoomImg4} src={img4} />
-        <img className={classes.zoomImg5} src={img5} />
-        <img className={classes.zoomImg6} src={img6} />
-        <img className={classes.zoomImg7} src={img7} />
-        <img className={classes.zoomImg8} src={img8} />
-        <img className={classes.zoomImg9} src={img9} />
-        <img className={classes.zoomImg1} src={img1} />
+        <img className={classes.zoomImg1} src={img1} alt="" />
+        <img className={classes.zoomImg2} src={img2} alt="" />
+        <img className={classes.zoomImg3} src={img3} alt="" />
+        <img className={classes.zoomImg4} src={img4} alt="" />
+        <img className={classes.zoomImg5} src={img5} alt="" />
+        <img className={classes.zoomImg6} src={img6} alt="" />
+        <img className={classes.zoomImg7} src={img7} alt="" />
+        <img className={classes.zoomImg8} src={img8} alt="" />
+        <img className={classes.zoomImg9} src={img9} alt="" />
+        <img className={classes.zoomImg1} src={img1} alt="" />
       </figure>
     </div>
   );

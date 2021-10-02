@@ -8,11 +8,11 @@ export default function Element(props) {
     <>
       <div className={classes.gridAwards}>
         <div className={classes.itemA}>
-          <FiStar className={classes.starClass} size={20} color="ae6e3d" />
+          <FiStar className={classes.starClass} size={20} color="#ae6e3d" />
         </div>
         <div className={classes.itemB}>{props.text}</div>
         <div className={classes.itemC}>
-          <FiStar className={classes.starClass} size={20} color="ae6e3d" />
+          <FiStar className={classes.starClass} size={20} color="#ae6e3d" />
         </div>
       </div>
     </>

@@ -3,6 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  padding: 80px 10px;
 }
 .backgroundImg {
   /* PARALLAX */
@@ -10,9 +11,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   text-align: center;
   padding: 30px 30px;
+  height: 100%;
   /* border-top: 1px solid rgb(130, 130, 130); */
   /* border-bottom: 1px solid rgb(130, 130, 130); */
 }
@@ -27,7 +28,7 @@
   font-size: 1.2rem;
   /* letter-spacing: 0.15em; */
   word-spacing: 0em;
-  /* line-height: 1.8em; */
+  line-height: 1.8em;
   text-transform: none;
   font-weight: normal;
 }
@@ -55,7 +56,10 @@
 }
 /* ***** MOBILE ***** */
 @media (max-width: 700px) {
+  .AppContainer {
+    padding: 20px 10px;
+  }
   .backgroundImg h2 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }

@@ -1,55 +1,45 @@
-import React, { Suspense } from "react";
+import React, { Suspense } from 'react';
 
 // npm i react-router-dom
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import "./global.css";
+import './global.css';
 // react-animate-on-scroll
-import "./utilities/animate.min.css";
+import './utilities/animate.min.css';
 
-import NavigationHome from "./components/navigation";
-import NavigationSeconds from "./components/navigation/navSeconds";
+import Menu from './components/Menu';
 
 // LAZY LOADING NEXT PAGES:
 // It will render the component ONLY WHEN / IF needed!
 // React { Suspense } is required to wrap all the Routes.
 const Home = React.lazy(() => {
-  return import("./pages/home");
+  return import('./pages/home');
 });
 const Videos = React.lazy(() => {
-  return import("./pages/videos");
+  return import('./pages/videos');
 });
 const Photos = React.lazy(() => {
-  return import("./pages/photos");
+  return import('./pages/photos');
 });
-const Footer = React.lazy(() => {
-  return import("./components/footer");
-});
-const VitaActiva = React.lazy(() => {
-  return import("./pages/vitaactiva");
-});
+// const Footer = React.lazy(() => {
+//   return import('./components/footer');
+// });
+// const VitaActiva = React.lazy(() => {
+//   return import("./pages/vitaactiva");
+// });
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <Navigation /> */}
+      {/* <Menu /> */}
       <Suspense fallback={<></>}>
         <Switch>
-          <Route
-            path="/vitaactiva"
-            render={() => (
-              <div>
-                <NavigationSeconds />
-                <VitaActiva />
-              </div>
-            )}
-          />
+          {/* <Route path="/vitaactiva" component={VitaActiva} /> */}
           <Route
             path="/videos"
             render={() => (
               <div>
-                <NavigationSeconds />
-                <Videos />
+                <Videos menu={<Menu />} />
               </div>
             )}
           />
@@ -57,8 +47,7 @@ function App() {
             path="/photos"
             render={() => (
               <div>
-                <NavigationSeconds />
-                <Photos />
+                <Photos menu={<Menu />} />
               </div>
             )}
           />
@@ -66,13 +55,12 @@ function App() {
             path="/"
             render={() => (
               <div>
-                <NavigationHome />
-                <Home />
+                <Home menu={<Menu />} />
               </div>
             )}
           />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Suspense>
     </BrowserRouter>
   );

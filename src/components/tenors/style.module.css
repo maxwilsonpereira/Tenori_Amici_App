@@ -5,6 +5,9 @@
   margin-right: auto;
   text-align: center;
 }
+.AppContainer * {
+  z-index: 1;
+}
 .AppContainer h1 {
   text-align: center;
   /* color: rgb(100, 100, 100); */
@@ -20,7 +23,7 @@
   text-transform: none;
   font-weight: normal;
 }
-.AppContainer h2 {
+.AboutTenor h2 {
   text-align: left;
   /* color: rgb(100, 100, 100); */
   color: #ae6e3d;
@@ -56,7 +59,11 @@
 }
 /* ***** MOBILE ***** */
 @media (max-width: 700px) {
-  /* .GridBio {
-    grid-template-columns: 100%;
-  } */
+  .AboutTenor {
+    position: absolute;
+    top: 75%;
+  }
+  .AboutTenor h2 {
+    font-size: 1em;
+  }
 }

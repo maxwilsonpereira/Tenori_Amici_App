@@ -1,37 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 // npm i react-redux
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
-import * as actionTypes from "../../../store/actions/actionsIndex";
+import * as actionTypes from '../../../store/actions/actionsIndex';
 
-import classes from "./style.module.css";
+import classes from './style.module.css';
 
-import NavigationItems from "./navItems";
-import SideDrawer from "./sideDrawer/sideDrawer";
+import NavigationItems from './navItems';
+import SideDrawer from './sideDrawer/sideDrawer';
 // npm i react-icons
 // https://react-icons.github.io/react-icons/
-import { FaBars } from "react-icons/fa";
-import { FaRegTimesCircle } from "react-icons/fa";
+import { FaBars } from 'react-icons/fa';
+import { FaRegTimesCircle } from 'react-icons/fa';
 
 function Navigation(props) {
-  const [showSideNav, setShowSideNav] = useState("");
+  const [showSideNav, setShowSideNav] = useState('');
   const [mobileFavicon, setMobileFavicon] = useState(null);
 
   // On Scroll Changing:
   const [listener, setListener] = useState(null);
-  const [status, setStatus] = useState("top");
+  const [status, setStatus] = useState('top');
 
   useEffect(() => {
     setListener(
-      document.addEventListener("scroll", (e) => {
+      document.addEventListener('scroll', (e) => {
         let scrolled = document.scrollingElement.scrollTop;
         if (scrolled >= 80) {
-          if (status !== "auxWord") {
-            setStatus("auxWord");
+          if (status !== 'auxWord') {
+            setStatus('auxWord');
           }
         } else {
-          if (status !== "top") {
-            setStatus("top");
+          if (status !== 'top') {
+            setStatus('top');
           }
         }
       })
@@ -82,19 +82,19 @@ function Navigation(props) {
       <div className={classes.NavMobile}>{showSideNav}</div>
       <div
         style={{
-          backgroundColor: status === "top" ? "transparent" : "white",
+          backgroundColor: status === 'top' ? 'transparent' : 'white',
         }}
         className={classes.backgroundOnScroll}
       />
       {mobileFavicon}
       <div
         style={{
-          opacity: status === "top" ? "0" : "1",
+          opacity: status === 'top' ? '0' : '1',
         }}
         className={classes.NavContainer}
       >
         <ul className={classes.NavigationItems}>
-          {status === "top" ? null : <NavigationItems />}
+          {status === 'top' ? null : <NavigationItems />}
         </ul>
       </div>
     </>

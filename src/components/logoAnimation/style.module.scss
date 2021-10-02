@@ -11,7 +11,8 @@
   position: absolute;
   color: white;
   width: 100%;
-  top: 75%;
+  /* top: 75%; */
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -20,12 +21,22 @@
   /* max-width: 800px; */
   /* padding: 50px; */
   transition: 1s ease-in-out;
+  @media (max-width: 700px) {
+    top: 40%;
+  }
 }
 .fadeArrow {
+  margin-top: 100px;
   transition: 1s ease-in-out;
   animation: 2s linear;
   animation-name: arrowani;
   opacity: 0.4;
+  @media (max-width: 700px) {
+    margin-top: 80px;
+  }
+  @media (max-height: 700px) {
+    display: none;
+  }
 }
 @keyframes arrowani {
   0% {
@@ -36,18 +47,5 @@
   }
   100% {
     opacity: 0.4;
-  }
-}
-
-/* ***** MOBILE ***** */
-@media (max-width: 700px) {
-  .fadeArrow {
-    display: none;
-  }
-  .logoDiv {
-    top: 55%;
-  }
-  .fadeArrow {
-    display: none;
   }
 }

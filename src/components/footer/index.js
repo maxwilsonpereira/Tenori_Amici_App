@@ -15,7 +15,11 @@ export default function Footer() {
         <p>Developed with React by Max Wilson Pereira</p>
       </span>
       <span className={classes.spanElement}>
-        <a href="https://www.linkedin.com/in/maxwilsonpereira/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/maxwilsonpereira/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className={classes.favicon}>
             <FaLinkedin size={35} />
           </div>

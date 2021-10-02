@@ -26,10 +26,11 @@ function VideoHome() {
         <br />
         <iframe
           id={classes.videoHome}
+          title="Tenori Amici in Austria"
           frameBorder="0"
           src="https://www.youtube.com/embed/sxCFtz4kypA?rel=0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
     </div>

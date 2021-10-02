@@ -20,12 +20,18 @@ import backImage from "../../assets/images/contact.jpg";
 import classes from "./style.module.css";
 import ButtonFunc from "../UI/buttons/buttonFunc";
 
+// SPINNER / LOADER:
+// npm i react-loader-spinner
+// https://www.npmjs.com/package/react-loader-spinner
+import Loader from "react-loader-spinner";
+
 export default function Contato() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [telephone, setTelephone] = useState("");
   const [message, setMessage] = useState("");
   const [messageToUser, setMessageToUser] = useState(null);
+  const [spinner, setSpinner] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -72,6 +78,17 @@ export default function Contato() {
       );
       return;
     } else {
+      setSpinner(
+        <div className={classes.spinnerContainer}>
+          <Loader
+            type="Oval"
+            color="#4d7994"
+            height={50}
+            width={50}
+            // timeout={3000}
+          />
+        </div>
+      );
       // SENDING MESSAGE:
       // npm install emailjs-com --save
       const templateParams = {
@@ -94,6 +111,7 @@ export default function Contato() {
         )
         .then(
           function (response) {
+            setSpinner("");
             setMessageToUser(
               <div className={classes.MessageToUser}>
                 Message sent successfully!
@@ -110,6 +128,7 @@ export default function Contato() {
             setMessage("");
           },
           function (err) {
+            setSpinner("");
             setMessageToUser(
               <div className={classes.MessageToUser}>
                 Service currently unavailable.
@@ -167,6 +186,7 @@ export default function Contato() {
                       className={classes.FontWebsite}
                       href="https://www.awmusic.at"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       www.awmusic.at
                     </a>
@@ -183,6 +203,7 @@ export default function Contato() {
                   {/* </span> */}
                 </div>
                 {messageToUser}
+                {spinner}
               </div>
               <div id="anchorPointContact">
                 <div>

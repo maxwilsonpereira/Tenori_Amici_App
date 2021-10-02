@@ -1,0 +1,127 @@
+$speedTextAnimation: 1s;
+@mixin textH1Messages() {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: GothamHTF;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  /* ***** BIG SCREEN ***** */
+  @media (min-width: 1000px) {
+    font-size: 2.5rem;
+  }
+  @media (min-width: 1400px) {
+    font-size: 3rem;
+  }
+  /* ***** MOBILE ***** */
+  @media (max-width: 700px) {
+    padding: 10px;
+    // font-size: 1.5rem;
+    font-size: 6vw;
+  }
+}
+
+// TEXT ANIMATIONS:
+@mixin waveLetters() {
+  /* Shared animation proprties apply to all */
+  animation: 0.2s ease-in-out;
+  animation-name: waveLetters;
+  // animation-iteration-count: infinite;
+  // animation-fill-mode: backwards;
+  transform: translateY(0%);
+}
+@keyframes waveLetters {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@for $i from 1 through 1000 {
+  .waveLetters:nth-child(#{$i}n) {
+    animation-delay: #{$i * 0.09}s;
+  }
+}
+
+@mixin textComeUpRightToLeft() {
+  animation: $speedTextAnimation ease-in-out;
+  animation-name: textComeUpRightToLeft;
+  // animation-fill-mode: backwards;
+}
+@keyframes textComeUpRightToLeft {
+  0% {
+    transform: translate(-10%, 900%) scale(0.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@mixin textComeUpRightToLeftHidded() {
+  animation: $speedTextAnimation ease-in-out;
+  animation-name: textComeUpRightToLeft;
+  // animation-fill-mode: backwards;
+}
+@keyframes textComeUpRightToLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-10%, 900%) scale(0.2);
+  }
+  30% {
+    opacity: 0;
+    transform: translate(-10%, 900%) scale(0.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@mixin textComeUpLeftToRight() {
+  animation: $speedTextAnimation ease-in-out;
+  animation-name: textComeUpLeftToRight;
+  // animation-fill-mode: backwards;
+}
+@keyframes textComeUpLeftToRight {
+  0% {
+    transform: translate(-30%, 900%) scale(0.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@mixin textComeUpRightToLeft2() {
+  animation: $speedTextAnimation ease-in-out;
+  animation-name: textComeUpRightToLeft2;
+  // animation-fill-mode: backwards;
+}
+@keyframes textComeUpRightToLeft2 {
+  0% {
+    transform: translate(-60%, 1900%) scale(0.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@mixin textFadeIn() {
+  animation: 2s ease-in-out;
+  animation-name: fadeInText;
+}
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

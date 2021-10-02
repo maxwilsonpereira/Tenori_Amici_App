@@ -17,7 +17,7 @@ export default function Media() {
       <div>
         <div className={classes.imgBox}>
           <NavHashLink to="/videos">
-            <img className={classes.medias} src={Videos} />
+            <img className={classes.medias} src={Videos} alt="" />
           </NavHashLink>
           <h1 className={classes.textOverImg}>Videos</h1>
         </div>
@@ -25,7 +25,7 @@ export default function Media() {
       <div>
         <div className={classes.imgBox}>
           <NavHashLink to="/photos">
-            <img className={classes.medias} src={Photos} />
+            <img className={classes.medias} src={Photos} alt="" />
           </NavHashLink>
           <h1 className={classes.textOverImg}>Photos</h1>
         </div>

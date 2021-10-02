@@ -11,6 +11,13 @@
     rgba(201, 200, 200, 1) 100%
   );
 } */
+.AppContainer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 60px 10px;
+}
 .instagram {
   margin: 0 5px;
   color: #202020;
@@ -34,12 +41,6 @@
 }
 .youtube:hover {
   color: #c4302b;
-}
-.AppContainer {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 .greyLightBack {
   text-align: center;
@@ -71,7 +72,10 @@
 }
 /* ***** MOBILE ***** */
 @media (max-width: 700px) {
-  /* .greyLightBack h1 {
-    font-size: 1.2em;
-  } */
+  .AppContainer {
+    padding: 20px 0px;
+  }
+  .greyLightBack h1 {
+    font-size: 1em;
+  }
 }

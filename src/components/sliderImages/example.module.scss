@@ -1,0 +1,81 @@
+.backgroundImage1 {
+  background-image: url("../../assets/images/jpg/main1.jpg");
+}
+.backgroundImage2 {
+  background-image: url("../../assets/images/jpg/main2.jpg");
+}
+.backgroundImage3 {
+  background-image: url("../../assets/images/jpg/main3.jpg");
+}
+
+/* codes for the image slider */
+#slider {
+  overflow: hidden;
+}
+#slider figure {
+  position: relative;
+  width: 400%; /* 100% for each picture, 4 pictures = 300% */
+  margin: 0;
+  left: 0;
+  /* animation: 60s infinite; */
+  animation: 6s infinite;
+  animation-name: sliderAnimation;
+}
+#slider figure div {
+  width: 25%; /* 100 / 3 pictures = 25% */
+  height: 100vh;
+  float: left;
+  // transform-origin: bottom;
+  // object-position: top center;
+}
+.backgroundImage1,
+.backgroundImage2,
+.backgroundImage3 {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 3s ease-in-out;
+}
+
+@keyframes sliderAnimation {
+  0% {
+    left: 0;
+  } /* you must divide 100% fot the amout of images you have */
+  30% {
+    left: 0%;
+  }
+  /* smaller these intermediate steps, faster will be the transition speed */
+  33% {
+    left: -100%;
+  } /* because my total width: 400% (4x 100% for 4 images) */
+  // Because the first and the last are the same, total are 3 images. +- 33% for each image
+  63% {
+    left: -100%;
+  }
+  66% {
+    left: -200%;
+  }
+  96% {
+    left: -200%;
+  }
+  // HERE IT CHANGES FOR THE FIRST AGAIN, and comes back to beggin on 0%:
+  99% {
+    left: -300%;
+  }
+  100% {
+    left: -300%;
+  }
+}
+
+// .textArea {
+//   z-index: 1;
+//   position: absolute;
+//   color: white;
+//   top: 80%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   cursor: pointer;
+// }

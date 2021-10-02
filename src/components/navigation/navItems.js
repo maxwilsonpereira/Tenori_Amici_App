@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from 'react';
 
 // npm i react-router-hash-link
 // import { NavHashLink } from "react-router-hash-link";
@@ -6,9 +6,9 @@ import React, { useState } from "react";
 // Smooth Scroll to Anchor:
 // npm i react-anchor-link-smooth-scroll
 // https://www.npmjs.com/package/react-anchor-link-smooth-scroll
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import classes from "./style.module.css";
+import classes from './style.module.css';
 
 export default function NavigationItems(props) {
   return (
