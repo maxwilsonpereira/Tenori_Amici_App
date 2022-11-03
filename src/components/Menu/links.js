@@ -19,57 +19,30 @@ import classes from './style.module.scss';
 
 import traviata1 from '../../assets/sounds/traviata1.mp3';
 import traviata2 from '../../assets/sounds/traviata2.mp3';
-const audio1 = new Audio(traviata1);
-const audio2 = new Audio(traviata1);
-const audio3 = new Audio(traviata1);
-const audio4 = new Audio(traviata2);
+import traviata3 from '../../assets/sounds/traviata3.mp3';
+import traviata4 from '../../assets/sounds/traviata4.mp3';
+import traviata5 from '../../assets/sounds/traviata5.mp3';
+
+const audios = [
+  new Audio(traviata1),
+  new Audio(traviata2),
+  new Audio(traviata3),
+  new Audio(traviata4),
+  new Audio(traviata5),
+];
 
 export default function HomeLinks(props) {
-  // let URL = "";
-  // useEffect(() => {
-  //   URL = window.location.href;
-  //   console.log("URL: ", URL);
-  // }, []);
   function playSound(num) {
-    if (num === 1) {
-      audio2.pause();
-      audio2.currentTime = 0;
-      audio3.pause();
-      audio3.currentTime = 0;
-      audio4.pause();
-      audio4.currentTime = 0;
-      audio1.play();
-    } else if (num === 2) {
-      audio1.pause();
-      audio1.currentTime = 0;
-      audio3.pause();
-      audio3.currentTime = 0;
-      audio4.pause();
-      audio4.currentTime = 0;
-      audio2.play();
-    } else if (num === 3) {
-      audio1.pause();
-      audio1.currentTime = 0;
-      audio2.pause();
-      audio2.currentTime = 0;
-      audio4.pause();
-      audio4.currentTime = 0;
-      audio3.play();
-    } else if (num === 4) {
-      audio1.pause();
-      audio1.currentTime = 0;
-      audio2.pause();
-      audio2.currentTime = 0;
-      audio3.pause();
-      audio3.currentTime = 0;
-      audio4.play();
-    }
+    for (let i = 1; i < 5; i++) audios[i].pause();
+    audios[num].play();
   }
 
   return (
     <div className={classes.textDiv}>
       <AnchorLink href="#start">
-        <h3 onClick={() => props.closeMenu()}>Home</h3>
+        <h3 onMouseOver={() => playSound(0)} onClick={() => props.closeMenu()}>
+          Home
+        </h3>
       </AnchorLink>
       <br />
       <AnchorLink href="#albumAnchor">

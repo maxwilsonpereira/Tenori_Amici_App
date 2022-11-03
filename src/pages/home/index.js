@@ -69,8 +69,9 @@ export default function Fotografia(props) {
         cutMisteriousMargin="cutMisteriousMargin"
         background="greyLightBack"
         // text='"One doesn’t stop seeing. One doesn’t stop framing. It doesn’t turn off and turn on. It’s on all the time."'
-        text="Internation Tenors"
-        text2="Brazil / Croatia / Mexico / Iran / Germany"
+        text="Our Internation Tenors"
+        subtitle="and lovely soprano"
+        text2="Brazil / Croatia / Mexico / Ukraine-Portugal / Iran / Germany"
       />
 
       <Tenors />

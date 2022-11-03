@@ -27,6 +27,7 @@ function MessageSection(props) {
           />
           <br />
           <h1>{props.text}</h1>
+          <h1>{props.subtitle}</h1>
           <br />
           <h2>{props.text2}</h2>
           <br />

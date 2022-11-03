@@ -18,6 +18,7 @@ import Max from '../../assets/images/tenors/max.jpg';
 import Luka from '../../assets/images/tenors/luka.jpg';
 import Fernando from '../../assets/images/tenors/fernando.jpg';
 import Ara from '../../assets/images/tenors/ara.jpg';
+import Nataliya from '../../assets/images/tenors/nataliya.jpg';
 import Alex from '../../assets/images/tenors/alex.jpg';
 
 export default function Tenors() {
@@ -98,6 +99,7 @@ export default function Tenors() {
             country="MEXICO"
             bio=""
           />
+          <SingleTenor image={Nataliya} name="NATALIYA STEPANSKA" />
           <SingleTenor
             image={Ara}
             name="ARA KARAPETIAN"

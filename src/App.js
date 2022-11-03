@@ -24,9 +24,6 @@ const Photos = React.lazy(() => {
 // const Footer = React.lazy(() => {
 //   return import('./components/footer');
 // });
-// const VitaActiva = React.lazy(() => {
-//   return import("./pages/vitaactiva");
-// });
 
 function App() {
   return (
@@ -34,7 +31,6 @@ function App() {
       {/* <Menu /> */}
       <Suspense fallback={<></>}>
         <Switch>
-          {/* <Route path="/vitaactiva" component={VitaActiva} /> */}
           <Route
             path="/videos"
             render={() => (
