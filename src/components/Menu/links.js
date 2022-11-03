@@ -33,7 +33,10 @@ const audios = [
 
 export default function HomeLinks(props) {
   function playSound(num) {
-    for (let i = 1; i < 5; i++) audios[i].pause();
+    for (let i = 0; i < 5; i++) {
+      audios[i].pause();
+      audios[i].currentTime = 0;
+    }
     audios[num].play();
   }
 
